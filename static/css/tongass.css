@@ -8,32 +8,56 @@
         vertical-align: baseline;
         background: transparent;
     }
-
-
-div.footer{
-	position:fixed;
-	bottom:0;
-	width:100%;
-	color:grey;
-	font-size:.8em;
-	text-align:center;
-}
-a {
-	text-decoration:none;
-}
-/*
-
-
-
-
-
+/* Site-wide things */
+	a {
+		color: #3b8bba;
+		text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+	a:visited {
+		color: #265778;
+	}
+	div.content {
+	    margin: 0 auto;
+	    padding: 0 2em;
+	    max-width: 800px;
+	    margin-bottom: 50px;
+	    line-height: 1.6em;
+	}
+/*	@font-face {
+		font-family: "Computer Modern";
+		src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+	}
+	@font-face {
+		font-family: "Computer Modern";
+		src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
+		font-weight: bold;
+	}
+	@font-face {
+		font-family: "Computer Modern";
+		src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
+		font-style: italic, oblique;
+	}
+	@font-face {
+		font-family: "Computer Modern";
+		src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
+		font-weight: bold;
+		font-style: italic, oblique;
+	}
 */
+	body {
+  		font-family: "Raleway", Helvetica, Arial, sans-serif
+	}
 /*-----------------------------------------------------------------------*/
 /* Menu things */
 	div.menu {
-		width:100%;
+		overflow-x:hidden;
+		position:static;
+		max-width:100%;
 	    margin: 0;
-	    padding: 0;
 	    background-color: #333;
 	}
 
@@ -42,10 +66,15 @@ a {
 	    list-style-type: none;
 	    overflow: hidden;
 	    z-index:1000;
+	    padding: 0 0 0 10em;
 	}
 
 	/* Set the menu items to be positioned horizontally */
 	div.menu li {
+		border-style:solid;
+		border-color:gray;
+		border-width: 2px 1px;
+		font-size:15pt;
 	    float: left;
 	}
 
@@ -94,13 +123,50 @@ a {
 	div.menu .dropdown:hover .dropdown-content {
 	    display: block;
 	}
+/* Banners, sidebars, and footer */
+	.banner {
+		position: static;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 10;
+		height:8em;
+		background-color:#333333;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+		div.banner div.logo{
+			width: 8em;
+			height: 8em;
+			border-right: #000000;
+		}
+		div.banner div.logo img {
+			margin:1em 2em;
+			max-width:6em;
+			max-height:6em;
+		}
+		div.banner div.sitename{
 
-#banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100px;
-  z-index: -1;
-}
+		}
+
+	div.sidebar {
+		background-color:#528be0;
+		top:0;
+		left:0;
+		position:fixed;
+		width:10em;
+		height:100%;
+		z-index:-1;
+	}
+
+	div.footer{
+		position:fixed;
+		bottom:0;
+		width:100%;
+		color:grey;
+		font-size:.8em;
+		text-align:center;
+	}
+	a {
+		text-decoration:none;
+	}
