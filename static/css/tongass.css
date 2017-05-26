@@ -1,6 +1,5 @@
 /* Reset everything before starting to avoid weird gaps*/
-/* div, div.top-menu ul, body, div.top-menu ul li */
-* {
+ div, div.top-menu ul, body, div.top-menu ul li {
 	overflow-x:hidden;
     margin: 0;
     padding: 0;
@@ -11,7 +10,13 @@
     background: transparent;
     }
 /* Markdown CSS */
+.override {
+    border: 1px solid #000 !important;
+}
 
+.a_class {
+    border: 2px solid red;
+}
 /* Site-wide things */
 	a {
 		color: #3b8bba;
@@ -25,7 +30,9 @@
 		color: #265778;
 	}
 	div.content {
-	    margin: 0 0 0 12em;
+		margin-top:-1.5em;
+		position:relative;
+		left:12em;
 	    padding: 0 2em;
 	    max-width: 800px;
 	    margin-bottom: 50px;
@@ -34,7 +41,9 @@
 	    font-family:sans-serif;
 	}
 	div.content h1 {
-		font-size:1.5em;
+		font-size:2em;
+		color:#444;
+		margin:1.5em 0 1em 0;
 	}
 	div.content p {
 		margin:1em 0;
@@ -51,6 +60,10 @@
 		position:static;
 		max-width:100%;
 	    margin: 0;
+		/*background: -webkit-linear-gradient(#444,#555,#444);*/ /* For Safari 5.1 to 6.0 */
+		/*background: -o-linear-gradient(#444,#555,#444);*/ /* For Opera 11.1 to 12.0 */
+		/*background: -moz-linear-gradient(#444,#555,#444);*/ /* For Firefox 3.6 to 15 */
+		/*background: linear-gradient(#444,#555,#444);*/ /* Standard syntax */
 	    background-color: #444;
 	}
 
@@ -63,9 +76,10 @@
 	}
 
 	/* Set the top-menu items to be positioned horizontally */
-	div.top-menu li {
+	div.top-menu ul>li {
 		border-style:solid;
-		border-color:#111;
+		border-color:#aaa;
+		border-width:0 1px 0 0;
 		font-size:15pt;
 	    float: left;
 	}
@@ -75,9 +89,13 @@
 	    display: inline-block;
 	    text-align: center;
 	    color:white;
-	    padding: 7px 10px;
+	    padding: 7px 14px;
 	    text-decoration: none;
 	    background-color:#444;
+		/*background: -webkit-linear-gradient(#444,#555,#444);*/ /* For Safari 5.1 to 6.0 */
+		/*background: -o-linear-gradient(#444,#555,#444);*/ /* For Opera 11.1 to 12.0 */
+		/*background: -moz-linear-gradient(#444,#555,#444);*/ /* For Firefox 3.6 to 15 */
+		/*background: linear-gradient(#444,#555,#444);*/ /* Standard syntax */
 	}
 
 	/* Set link buttons to turn grey when hovered over */
@@ -93,6 +111,7 @@
 
 	/* Style dropdown-content to be invisible until activated */
 	div.top-menu .dropdown-content {
+		font-size:12pt;
 	    display: none;
 	    position: absolute;
 	    background-color: lightgray;
@@ -149,8 +168,6 @@
 		}
 
 	.site-header {
-		position:relative;
-		top:2em;
 	    color: white;
 	    text-align: center;
 	 }
@@ -163,8 +180,8 @@
 
 
 
-	div.sidebar {
-		background-color:#528be0;
+	div.sidebar1 {
+		background-color:#ddd;
 		left:0;
 		top:-10em;
 		position:fixed;
@@ -172,10 +189,19 @@
 		bottom:0;
 		z-index:-1;
 	}
+	div.sidebar2 {
+		background-color:#ddd;
+		left:68.5em;
+		top:-10em;
+		position:fixed;
+		width:100%;
+		bottom:0;
+		z-index:-1;
+	}
 
 	div.footer{
 		bottom:0;
-		width:100%;
+		max-width:1250px;
 		color:grey;
 		font-size:.8em;
 		text-align:center;
@@ -185,7 +211,7 @@
 	}
 /* Page specific things */
 	.header {
-	    max-width: 800px;
+	    max-width: 865px;
 		position:relative;
 		left:10em;
 	    margin: 0;
