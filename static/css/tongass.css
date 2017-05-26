@@ -1,4 +1,5 @@
 /* Reset everything before starting to avoid weird gaps*/
+/* div, div.top-menu ul, body, div.top-menu ul li */
 * {
 	overflow-x:hidden;
     margin: 0;
@@ -9,6 +10,8 @@
     vertical-align: baseline;
     background: transparent;
     }
+/* Markdown CSS */
+
 /* Site-wide things */
 	a {
 		color: #3b8bba;
