@@ -1,12 +1,13 @@
 /* Reset everything before starting to avoid weird gaps*/
 * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent;
+	overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
     }
 /* Site-wide things */
 	a {
@@ -21,35 +22,24 @@
 		color: #265778;
 	}
 	div.content {
-	    margin: 0 auto;
+	    margin: 0 0 0 12em;
 	    padding: 0 2em;
 	    max-width: 800px;
 	    margin-bottom: 50px;
 	    line-height: 1.6em;
+	    color:#777;
+	    font-family:sans-serif;
 	}
-/*	@font-face {
-		font-family: "Computer Modern";
-		src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+	div.content h1 {
+		font-size:1.5em;
 	}
-	@font-face {
-		font-family: "Computer Modern";
-		src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-		font-weight: bold;
+	div.content p {
+		margin:1em 0;
 	}
-	@font-face {
-		font-family: "Computer Modern";
-		src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
-		font-style: italic, oblique;
-	}
-	@font-face {
-		font-family: "Computer Modern";
-		src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
-		font-weight: bold;
-		font-style: italic, oblique;
-	}
-*/
+ 
 	body {
-  		font-family: "Raleway", Helvetica, Arial, sans-serif
+  		font-family: "Raleway", Helvetica, Arial, sans-serif;
+  		color:#777;
 	}
 /*-----------------------------------------------------------------------*/
 /* top-menu things */
@@ -128,6 +118,7 @@
 	}
 /* Banners, sidebars, and footer */
 	.banner {
+		overflow-y:hidden;
 		position: static;
 		top: 0;
 		left: 0;
@@ -139,8 +130,10 @@
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	}
 		div.banner div.logo{
-			width: 8em;
-			height: 8em;
+			margin:0;
+			float:left;
+			width: 10em;
+			height: 10em;
 			border-right: #000000;
 		}
 		div.banner div.logo img {
@@ -151,72 +144,33 @@
 		div.banner div.sitename{
 
 		}
-	div.headerbox {
-		max-width:100%;
-		max-height:100%;
+
+	.site-header {
 		position:relative;
-		top:-7em;
-	}
-/*	.header {
-		max-width:600px;
+		top:2em;
 	    color: white;
 	    text-align: center;
 	 }
-	    .header h1 {
-	        margin: 0.2em 0;
-	        font-size: 3em;
-	        font-weight: 300;
-    	    border-bottom: 1px solid #eee;
-	    }
-	     .header h2 {
-	        font-weight: 300;
-	        color: #ccc;
-	        padding: 0;
-	        margin-top: 0;
-	    }*/
-		.header {
-		     margin: 0;
-		     color: white;
-		     text-align: center;
-		 }
-		 	.header .leftpad{
-		 		max-width:15em;
-		 	}
-		 	.header .rightpad{
-		 		max-width:10em;
-		 	}
-		    .header h1 {
-		    	max-width:570px;
-		        margin: auto;
-		        font-size: 3em;
-		        font-weight: 300;
-    	    	border-bottom: 1px solid #eee;
-		    }
-		     .header h2 {
-		        font-weight: 300;
-		        color: #ccc;
-		        padding: 0;
-		        margin-top: 0;
-		    }
+    .site-header h1 {
+    	max-width:570px;
+        font-size: 4em;
+        font-weight:bold;
+/*        border-bottom:solid white 1px;*/
+    }
 
-.content-subhead {
-    margin: 50px 0 20px 0;
-    font-weight: 300;
-    color: #888;
-}
+
 
 	div.sidebar {
 		background-color:#528be0;
-		top:8em;
 		left:0;
+		top:-10em;
 		position:fixed;
 		width:10em;
-		height:100%;
-		z-index:1001;
+		bottom:0;
+		z-index:-1;
 	}
 
 	div.footer{
-		position:fixed;
 		bottom:0;
 		width:100%;
 		color:grey;
@@ -226,3 +180,20 @@
 	a {
 		text-decoration:none;
 	}
+/* Page specific things */
+	.header {
+	    max-width: 800px;
+		position:relative;
+		left:10em;
+	    margin: 0;
+	    color: black;
+	    text-align: center;
+	    padding:2em;
+	 }
+    .header h1 {
+    	max-width:100%;
+        margin: auto;
+        font-size: 3em;
+        font-weight: 300;
+    	border-bottom: 2px dotted #888;
+    }

@@ -1,5 +1,5 @@
 {{ partial "head.html" . }}
-{{ partial "header.html" . }}
+{{ partial "site-header.html" . }}
 <div class="content">
   {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
     {{ .Render "summary"}}
