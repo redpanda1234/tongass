@@ -52,75 +52,78 @@
   		font-family: "Raleway", Helvetica, Arial, sans-serif
 	}
 /*-----------------------------------------------------------------------*/
-/* Menu things */
-	div.menu {
+/* top-menu things */
+	div.top-menu {
 		overflow-x:hidden;
 		position:static;
 		max-width:100%;
 	    margin: 0;
-	    background-color: #333;
+	    background-color: #444;
 	}
 
-	/* style the menu list */
-	div.menu ul {
+	/* style the top-menu list */
+	div.top-menu ul {
 	    list-style-type: none;
 	    overflow: hidden;
 	    z-index:1000;
 	    padding: 0 0 0 10em;
 	}
 
-	/* Set the menu items to be positioned horizontally */
-	div.menu li {
+	/* Set the top-menu items to be positioned horizontally */
+	div.top-menu li {
 		border-style:solid;
-		border-color:gray;
-		border-width: 2px 1px;
+		border-color:#111;
 		font-size:15pt;
 	    float: left;
 	}
 
-	/* Style how menu entries' links should look */
-	div.menu li a, .dropbtn {
+	/* Style how top-menu entries' links should look */
+	div.top-menu li a, .dropbtn {
 	    display: inline-block;
-	    color: white;
 	    text-align: center;
-	    padding: 14px 16px;
+	    color:white;
+	    padding: 7px 10px;
 	    text-decoration: none;
+	    background-color:#444;
 	}
 
 	/* Set link buttons to turn grey when hovered over */
-	div.menu li a:hover, .dropdown:hover .dropbtn {
+	div.top-menu li a:hover, .dropdown:hover .dropbtn {
 	    background-color: gray;
 	}
 
 	/* Get dropdown elements to display in block */
-	div.menu li.dropdown {
+	div.top-menu li.dropdown {
+		background-color:lightgray;
 	    display: inline-block;
 	}
 
 	/* Style dropdown-content to be invisible until activated */
-	div.menu .dropdown-content {
+	div.top-menu .dropdown-content {
 	    display: none;
 	    position: absolute;
-	    background-color: #f9f9f9;
+	    background-color: lightgray;
 	    min-width: 160px;
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	    z-index: 1;
 	}
 
 	/* Format the links for dropdown content */
-	div.menu .dropdown-content a {
+	div.top-menu .dropdown-content a {
 	    color: black;
 	    padding: 12px 16px;
 	    text-decoration: none;
 	    display: block;
 	    text-align: left;
+	    background-color:lightgray;
 	}
 
 	/* Set dropdown links to change color when hovered too */
-	div.menu .dropdown-content a:hover {background-color: #f1f1f1}
+	div.top-menu .dropdown-content a:hover {background-color: #f1f1f1}
 
 	/* Set dropdown links to display when drop tab hovered */
-	div.menu .dropdown:hover .dropdown-content {
+	div.top-menu .dropdown:hover .dropdown-content {
+		background-color:lightgray;
 	    display: block;
 	}
 /* Banners, sidebars, and footer */
@@ -132,7 +135,7 @@
 		width: 100%;
 		z-index: 10;
 		height:8em;
-		background-color:#333333;
+		background-color:#222;
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	}
 		div.banner div.logo{
@@ -148,15 +151,68 @@
 		div.banner div.sitename{
 
 		}
+	div.headerbox {
+		max-width:100%;
+		max-height:100%;
+		position:relative;
+		top:-7em;
+	}
+/*	.header {
+		max-width:600px;
+	    color: white;
+	    text-align: center;
+	 }
+	    .header h1 {
+	        margin: 0.2em 0;
+	        font-size: 3em;
+	        font-weight: 300;
+    	    border-bottom: 1px solid #eee;
+	    }
+	     .header h2 {
+	        font-weight: 300;
+	        color: #ccc;
+	        padding: 0;
+	        margin-top: 0;
+	    }*/
+		.header {
+		     margin: 0;
+		     color: white;
+		     text-align: center;
+		 }
+		 	.header .leftpad{
+		 		max-width:15em;
+		 	}
+		 	.header .rightpad{
+		 		max-width:10em;
+		 	}
+		    .header h1 {
+		    	max-width:570px;
+		        margin: auto;
+		        font-size: 3em;
+		        font-weight: 300;
+    	    	border-bottom: 1px solid #eee;
+		    }
+		     .header h2 {
+		        font-weight: 300;
+		        color: #ccc;
+		        padding: 0;
+		        margin-top: 0;
+		    }
+
+.content-subhead {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: #888;
+}
 
 	div.sidebar {
 		background-color:#528be0;
-		top:0;
+		top:8em;
 		left:0;
 		position:fixed;
 		width:10em;
 		height:100%;
-		z-index:-1;
+		z-index:1001;
 	}
 
 	div.footer{

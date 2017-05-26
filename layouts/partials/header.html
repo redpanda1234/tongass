@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="/css/tongass.css">
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>{{ .Title }}</title>
-</head>
-<body style="margin:0;padding:0;">
-{{ partial "site-banner.html" }}
+{{ partial "site-banner.html" . }}
 {{ partial "menu.html" . }}
-{{ partial "side-bar.html" }}
+{{ partial "side-bar.html" . }}
