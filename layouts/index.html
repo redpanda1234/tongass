@@ -1,10 +1,6 @@
 {{ partial "head.html" . }}
 {{ partial "site-header.html" . }}
 <div class="content" style="padding:1.5em 0 0 0;">
-	{{ range .Data.Pages }}
-	    {{ if isset .params "homeContent" }}
-	        {{ .Content }}
-	    {{ end }}
-	{{ end }}
+Click on the Home button
 </div>
 {{ partial "footer.html" .}}
