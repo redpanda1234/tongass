@@ -39,6 +39,7 @@
 	    color:#777;
 	    font-family:sans-serif;
 	    z-index:1;
+
 	}
 	div.content h1 {
 		font-size:2em;
@@ -189,7 +190,7 @@
 
 	.site-header {
 	    color: white;
-	    text-align: center;
+	    text-align: left;
 	 }
     .site-header h1 {
     	max-width:570px;
@@ -220,8 +221,10 @@
 	}
 
 	div.footer{
+		position:relative;
+		left:6em;
 		bottom:0;
-		max-width:1250px;
+		max-width:1050px;
 		color:grey;
 		font-size:.8em;
 		text-align:center;
