@@ -1,9 +1,7 @@
 {{ partial "head.html" . }}
 {{ partial "site-header.html" . }}
-<div class="content">
-  {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
-    {{ .Render "summary"}}
-  {{ end }}
-  {{ partial "pagination.html" . }}
+<div class="content" style="padding:1.5em 0 0 0;">
+	{{ .Content }}
+
 </div>
 {{ partial "footer.html" .}}

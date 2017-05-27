@@ -39,6 +39,7 @@
 	    line-height: 1.6em;
 	    color:#777;
 	    font-family:sans-serif;
+	    z-index:-1;
 	}
 	div.content h1 {
 		font-size:2em;
@@ -66,6 +67,7 @@
 		/*background: -moz-linear-gradient(#444,#555,#444);*/ /* For Firefox 3.6 to 15 */
 		/*background: linear-gradient(#444,#555,#444);*/ /* Standard syntax */
 	    background-color: #444;
+	    z-index:1000;
 	}
 	div.fixed {
 	  width:100%;
@@ -90,6 +92,7 @@
 		border-width:0 1px 0 0;
 		font-size:15pt;
 	    float: left;
+	    z-index:1000;
 	}
 
 	/* Style how top-menu entries' links should look */
@@ -100,6 +103,7 @@
 	    padding: 7px 14px;
 	    text-decoration: none;
 	    background-color:#444;
+	    z-index:1000;
 		/*background: -webkit-linear-gradient(#444,#555,#444);*/ /* For Safari 5.1 to 6.0 */
 		/*background: -o-linear-gradient(#444,#555,#444);*/ /* For Opera 11.1 to 12.0 */
 		/*background: -moz-linear-gradient(#444,#555,#444);*/ /* For Firefox 3.6 to 15 */
@@ -109,12 +113,14 @@
 	/* Set link buttons to turn grey when hovered over */
 	div.top-menu li a:hover, .dropdown:hover .dropbtn {
 	    background-color: gray;
+	    z-index:1000;
 	}
 
 	/* Get dropdown elements to display in block */
 	div.top-menu li.dropdown {
 		background-color:lightgray;
 	    display: inline-block;
+	    z-index:1000;
 	}
 
 	/* Style dropdown-content to be invisible until activated */
@@ -125,7 +131,7 @@
 	    background-color: lightgray;
 	    min-width: 160px;
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	    z-index: 1;
+	    z-index: 1000;
 	}
 
 	/* Format the links for dropdown content */
@@ -136,13 +142,15 @@
 	    display: block;
 	    text-align: left;
 	    background-color:lightgray;
+	    z-index:1000;
 	}
 
 	/* Set dropdown links to change color when hovered too */
-	div.top-menu .dropdown-content a:hover {background-color: #f1f1f1}
+	div.top-menu .dropdown-content a:hover {background-color: #f1f1f1; z-index:1000;}
 
 	/* Set dropdown links to display when drop tab hovered */
 	div.top-menu .dropdown:hover .dropdown-content {
+		z-index:1000;
 		background-color:lightgray;
 	    display: block;
 	}
@@ -159,6 +167,11 @@
 		background-color:#222;
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	}
+		/*div.top-banner {
+			background-color:#111;
+			height:40px;
+			max-width:100%;
+		}*/
 		div.banner div.logo{
 			margin:0;
 			float:left;
