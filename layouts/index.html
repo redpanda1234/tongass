@@ -2,7 +2,7 @@
 {{ partial "site-header.html" . }}
 <div class="content" style="padding:1.5em 0 0 0;">
 	{{ range .Data.Pages }}
-	    {{ if isset .Params "homeContent" }}
+	    {{ if isset .params "homeContent" }}
 	        {{ .Content }}
 	    {{ end }}
 	{{ end }}
