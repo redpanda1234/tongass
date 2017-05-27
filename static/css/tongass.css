@@ -39,7 +39,6 @@
 	    line-height: 1.6em;
 	    color:#777;
 	    font-family:sans-serif;
-	    z-index:-1;
 	}
 	div.content h1 {
 		font-size:2em;
@@ -49,6 +48,7 @@
 	div.content p {
 		display:block;
 		margin:1em 0;
+		z-index:2;
 	}
  
 	body {
