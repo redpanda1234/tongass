@@ -258,9 +258,9 @@
 	    z-index:0;
 	 }
     .header-404 h1 {
-    	max-width:100%;
+    	max-width:50%;
         margin: auto;
-        font-size: 5em;
+        font-size: 2.2em;
         text-align:center;
         font-weight: bold;
         color:#222;
