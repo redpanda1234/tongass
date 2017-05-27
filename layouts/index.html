@@ -1,6 +1,10 @@
 {{ partial "head.html" . }}
 {{ partial "site-header.html" . }}
 <div class="content" style="padding:1.5em 0 0 0;">
-	{{ .Content }}
+	{{ range .Data.Pages }}
+	    {{ if isset .Params "homeContent" }}
+	        {{ .Content }}
+	    {{ end }}
+	{{ end }}
 </div>
 {{ partial "footer.html" .}}
