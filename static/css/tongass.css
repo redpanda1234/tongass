@@ -249,3 +249,38 @@
         font-weight: 300;
     	border-bottom: 1px solid #555;
     }
+/* 404 Page */
+	.header-404 {
+	    max-width: 100%;
+	    margin: auto;
+	    text-align: center;
+	    padding:0 0 1em 3em;
+	    z-index:0;
+	 }
+    .header-404 h1 {
+    	max-width:100%;
+        margin: auto;
+        font-size: 5em;
+        text-align:center;
+        font-weight: bold;
+        color:#222;
+    }
+    .header-404 a {
+    	text-decoration: none;
+    	color:#333;
+    }
+    div.a404 {
+    	max-width:100%;
+    }
+    div.a404 img{
+    	max-width:30%;
+    	display:block;
+    	margin:0 auto;
+    }
+    div.a404-text {
+    	font-family:serif;
+    	padding:0 0 0 1em;
+    	color:#444;
+    	max-width:50%;
+    	margin:1em auto;
+    }
