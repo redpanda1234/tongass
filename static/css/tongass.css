@@ -19,206 +19,182 @@ div, div.top-menu ul, body, div.top-menu ul li {
     border: 2px solid red;
 }
 /* Site-wide things */
-        a {
-                color: #3b8bba;
-                text-decoration: none;
-        }
-        a:hover,
-        a:focus {
-                text-decoration: underline;
-        }
-        a:visited {
-                color: #265778;
-        }
-        div.content {
-            position:relative;
-            margin-left:12em;
-            padding: 0 2em;
-            max-width: 800px;
-            margin-bottom: 50px;
-            line-height: 1.6em;
-            color:#666;
-            font-family:sans-serif;
-            z-index:1;
+	a {
+		color: #3b8bba;
+		text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+	a:visited {
+		color: #265778;
+	}
+	div.content {
+		position:relative;
+		margin-left:12em;
+	    padding: 0 2em;
+	    max-width: 800px;
+	    margin-bottom: 50px;
+	    line-height: 1.6em;
+	    color:#666;
+	    font-family:sans-serif;
+	    z-index:1;
 
-        }
-        div.content h1 {
-                font-size:2em;
-                color:#444;
-                margin:.5em 0 1em 0;
-        }
-        div.content p {
-                display:block;
-                margin:1em 0;
-        }
+	}
+	div.content h1 {
+		font-size:2em;
+		color:#444;
+		margin:.5em 0 1em 0;
+	}
+	div.content p {
+		display:block;
+		margin:1em 0;
+	}
 
-        body {
-                font-family: Helvetica, Arial, sans-serif;
-                color:#777;
-        }
+	body {
+  		font-family: Helvetica, Arial, sans-serif;
+  		color:#777;
+	}
 /*-----------------------------------------------------------------------*/
 /* top-menu things */
-        div.top-menu {
-            overflow-x:hidden;
-            position:static;
-            max-width:100%;
-            margin: 0;
-            background-color: #444;
-            z-index:1000;
-        }
+	div.top-menu {
+		overflow-x:hidden;
+		position:static;
+		max-width:100%;
+	    margin: 0;
+		/*background: -webkit-linear-gradient(#444,#555,#444);*/ /* For Safari 5.1 to 6.0 */
+		/*background: -o-linear-gradient(#444,#555,#444);*/ /* For Opera 11.1 to 12.0 */
+		/*background: -moz-linear-gradient(#444,#555,#444);*/ /* For Firefox 3.6 to 15 */
+		/*background: linear-gradient(#444,#555,#444);*/ /* Standard syntax */
+	    background-color: #444;
+	    z-index:1000;
+	}
+	div.fixed {
+	  width:100%;
+	  position: fixed;
+	  top: 0;
+	  z-index: 1000;
+	}
 
-        div.fixed {
-          width:100%;
-          position: fixed;
-          top: 0;
-          z-index: 1000;
-        }
+	/* style the top-menu list */
+	div.top-menu ul {
+	    list-style-type: none;
+	    overflow: hidden;
+	    z-index:1000;
+	    padding: 0 0 0 10em;
+	}
 
-        /* style the top-menu list */
-        div.top-menu ul {
-            /*list-style-type: none;*/
-            overflow: hidden;
-            z-index:1000;
-            padding: 0 0 0 10em;
-        }
+	/* Set the top-menu items to be positioned horizontally */
+	div.top-menu ul>li {
+		font-family:Roboto, sans-serif;
+		border-style:solid;
+		border-color:#aaa;
+		border-width:0 1px 0 0;
+		font-size:15pt;
+	    float: left;
+	    z-index:1000;
+	}
 
-        div.top-menu li {
-            display:inline;
-            position:relative;
-        }
+	/* Style how top-menu entries' links should look */
+	div.top-menu li a, .dropbtn {
+	    display: inline-block;
+	    text-align: center;
+	    color:white;
+	    padding: 7px 14px;
+	    text-decoration: none;
+	    background-color:#444;
+	    z-index:1000;
+		/*background: -webkit-linear-gradient(#444,#555,#444);*/ /* For Safari 5.1 to 6.0 */
+		/*background: -o-linear-gradient(#444,#555,#444);*/ /* For Opera 11.1 to 12.0 */
+		/*background: -moz-linear-gradient(#444,#555,#444);*/ /* For Firefox 3.6 to 15 */
+		/*background: linear-gradient(#444,#555,#444);*/ /* Standard syntax */
+	}
 
-        div.top-menu ul ul {
-            position:absolute;
-            display:none;
-        }
+	/* Set link buttons to turn grey when hovered over */
+	div.top-menu li a:hover, .dropdown:hover .dropbtn {
+	    background-color: gray;
+	    z-index:1000;
+	}
 
-        div.top-menu li:hover > ul {
-            display:block;
-        }
+	/* Get dropdown elements to display in block */
+	div.top-menu li.dropdown {
+		background-color:lightgray;
+	    display: inline-block;
+	    z-index:1000;
+	}
 
-        div.top-menu ul ul ul {
-            left:100%
-            top:0;
-        }
+	/* Style dropdown-content to be invisible until activated */
+	div.top-menu .dropdown-content {
+		font-size:12pt;
+	    display: none;
+	    position: absolute;
+	    background-color: lightgray;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1000;
+	}
 
-        /* Set the top-menu items to be positioned horizontally */
-        div.top-menu ul>li {
-            font-family:Roboto, sans-serif;
-            border-style:solid;
-            border-color:#aaa;
-            border-width:0 1px 0 0;
-            font-size:15pt;
-            float: left;
-            z-index:1000;
-        }
+	/* Format the links for dropdown content */
+	div.top-menu .dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	    text-align: left;
+	    background-color:lightgray;
+	    z-index:1000;
+	}
 
-        /* Style how top-menu entries' links should look */
-        div.top-menu li a, .dropbtn {
-            display: inline-block;
-            text-align: center;
-            color:white;
-            padding: 7px 14px;
-            text-decoration: none;
-            background-color:#444;
-            z-index:1000;
-                /*background: -webkit-linear-gradient(#444,#555,#444);*/ /* For Safari 5.1 to 6.0 */
-                /*background: -o-linear-gradient(#444,#555,#444);*/ /* For Opera 11.1 to 12.0 */
-                /*background: -moz-linear-gradient(#444,#555,#444);*/ /* For Firefox 3.6 to 15 */
-                /*background: linear-gradient(#444,#555,#444);*/ /* Standard syntax */
-        }
+	/* Set dropdown links to change color when hovered too */
+	div.top-menu .dropdown-content a:hover {background-color: #f1f1f1; z-index:1000;}
 
-        /* Set link buttons to turn grey when hovered over */
-        div.top-menu li a:hover, .dropdown:hover .dropbtn {
-            background-color: gray;
-            z-index:1000;
-        }
-
-        /* Get dropdown elements to display in block */
-        div.top-menu li.dropdown {
-            background-color:lightgray;
-            display: inline-block;
-            z-index:1000;
-        }
-
-        /* Style dropdown-content to be invisible until activated */
-        div.top-menu .dropdown-content {
-            font-size:12pt;
-            display: none;
-            position: absolute;
-            background-color: lightgray;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-
-        /* Format the links for dropdown content */
-        div.top-menu .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            background-color:lightgray;
-            z-index:1000;
-        }
-
-        /* Set dropdown links to change color when hovered too */
-        div.top-menu .dropdown-content a:hover {background-color: #f1f1f1; z-index:1000;}
-
-        /* Set dropdown links to display when drop tab hovered */
-        div.top-menu .dropdown:hover .dropdown-content {
-            z-index:1000;
-            background-color:lightgray;
-            display: block;
-        }
-
-        .dropdown-content sub-item {
-            font-size: 12pt;
-            display: none;
-            position: absolute;
-
-        }
-
+	/* Set dropdown links to display when drop tab hovered */
+	div.top-menu .dropdown:hover .dropdown-content {
+		z-index:1000;
+		background-color:lightgray;
+	    display: block;
+	}
 /* Banners, sidebars, and footer */
-        .banner {
-            overflow-y:hidden;
-            position: static;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            z-index: 10;
-            height:8em;
-            background-color:#222;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        }
-                /*div.top-banner {
-                        background-color:#111;
-                        height:40px;
-                        max-width:100%;
-                }*/
-                div.banner div.logo{
-                        margin:0;
-                        float:left;
-                        width: 10em;
-                        height: 10em;
-                        border-right: #000000;
-                }
-                div.banner div.logo img {
-                        margin:1em 2em;
-                        max-width:6em;
-                        max-height:6em;
-                }
-                div.banner div.sitename{
+	.banner {
+		overflow-y:hidden;
+		position: static;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 10;
+		height:8em;
+		background-color:#222;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+		/*div.top-banner {
+			background-color:#111;
+			height:40px;
+			max-width:100%;
+		}*/
+		div.banner div.logo{
+			margin:0;
+			float:left;
+			width: 10em;
+			height: 10em;
+			border-right: #000000;
+		}
+		div.banner div.logo img {
+			margin:1em 2em;
+			max-width:6em;
+			max-height:6em;
+		}
+		div.banner div.sitename{
 
-                }
+		}
 
-        .site-header {
-            color: white;
-            text-align: left;
-         }
+	.site-header {
+	    color: white;
+	    text-align: left;
+	 }
     .site-header h1 {
-        max-width:570px;
+    	max-width:570px;
         font-size: 4em;
         font-weight:bold;
 /*        border-bottom:solid white 1px;*/
@@ -226,64 +202,64 @@ div, div.top-menu ul, body, div.top-menu ul li {
 
 
 
-        div.sidebar1 {
-                background-color:#ddd;
-                left:0;
-                top:-10em;
-                position:fixed;
-                width:10em;
-                bottom:0;
-                z-index:-1;
-        }
-        div.sidebar2 {
-                background-color:#ddd;
-                left:68.5em;
-                top:-10em;
-                position:fixed;
-                width:100%;
-                bottom:0;
-                z-index:-1;
-        }
+	div.sidebar1 {
+		background-color:#ddd;
+		left:0;
+		top:-10em;
+		position:fixed;
+		width:10em;
+		bottom:0;
+		z-index:-1;
+	}
+	div.sidebar2 {
+		background-color:#ddd;
+		left:68.5em;
+		top:-10em;
+		position:fixed;
+		width:100%;
+		bottom:0;
+		z-index:-1;
+	}
 
-        div.footer{
-                position:relative;
-                left:6em;
-                bottom:0;
-                max-width:1050px;
-                color:grey;
-                font-size:.8em;
-                text-align:center;
-        }
-        a {
-                text-decoration:none;
-        }
+	div.footer{
+		position:relative;
+		left:6em;
+		bottom:0;
+		max-width:1050px;
+		color:grey;
+		font-size:.8em;
+		text-align:center;
+	}
+	a {
+		text-decoration:none;
+	}
 /* Page specific things */
-        .header {
-            max-width: 865px;
-            margin: 0 -1.5em 0 10em;
-            color: black;
-            text-align: center;
-            padding:2em;
-            z-index:0;
-         }
+	.header {
+	    max-width: 865px;
+	    margin: 0 -1.5em 0 10em;
+	    color: black;
+	    text-align: center;
+	    padding:2em;
+	    z-index:0;
+	 }
     .header h1 {
-        max-width:100%;
-        padding:0 0 .25em 0;
+    	max-width:100%;
+    	padding:0 0 .25em 0;
         margin: auto;
         font-size: 3em;
         font-weight: 300;
-        border-bottom: 1px solid #555;
+    	border-bottom: 1px solid #555;
     }
 /* 404 Page */
-        .header-404 {
-            max-width: 100%;
-            margin: auto;
-            text-align: center;
-            padding:0 0 1em 3em;
-            z-index:0;
-         }
+	.header-404 {
+	    max-width: 100%;
+	    margin: auto;
+	    text-align: center;
+	    padding:0 0 1em 3em;
+	    z-index:0;
+	 }
     .header-404 h1 {
-        max-width:50%;
+    	max-width:50%;
         margin: auto;
         font-size: 2.2em;
         text-align:center;
@@ -291,21 +267,21 @@ div, div.top-menu ul, body, div.top-menu ul li {
         color:#222;
     }
     .header-404 a {
-        text-decoration: none;
-        color:#333;
+    	text-decoration: none;
+    	color:#333;
     }
     div.a404 {
-        max-width:100%;
+    	max-width:100%;
     }
     div.a404 img{
-        max-width:30%;
-        display:block;
-        margin:0 auto;
+    	max-width:30%;
+    	display:block;
+    	margin:0 auto;
     }
     div.a404-text {
-        font-family:serif;
-        padding:0 0 0 1em;
-        color:#444;
-        max-width:50%;
-        margin:1em auto;
+    	font-family:serif;
+    	padding:0 0 0 1em;
+    	color:#444;
+    	max-width:50%;
+    	margin:1em auto;
     }
