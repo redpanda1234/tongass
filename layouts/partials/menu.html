@@ -8,9 +8,18 @@
         <li class="dropdown">
           <a href="{{ .URL }}" class="dropbtn">{{ .Pre }}{{ .Name }}</a>
           <div class="dropdown-content">
-            {{ range .Children }}
-              <a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
-            {{ end }}
+            <ul>
+              {{ range .Children }}
+                <a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
+                {{ if .HasChildren }}
+                  {{ range .Children }}
+                    <li>
+                      <a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            </ul>
           </div>
         </li>
       {{else}}
